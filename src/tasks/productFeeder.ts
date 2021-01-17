@@ -19,8 +19,8 @@ export default async () => {
     const pageSize: number = 50;
     let count: number = 0;
 
-    // while (true) {
-    while (count < 50) {    // test
+    while (true) {
+    // while (count < 50) {    // test
         try {
             const result = await pgPool.query(`SELECT id, category_id, created_at FROM products.product OFFSET ${count} LIMIT ${pageSize}`);
             if (result.rowCount === 0) break;
