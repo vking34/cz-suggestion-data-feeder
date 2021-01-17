@@ -8,5 +8,12 @@ monogoose.connection.once('open', () => {
 });
 
 // tasks
-// import convertCategories from './tasks/categoryConvertor';
-// convertCategories()
+import feedData from './tasks/index';
+feedData()
+
+
+// handle uncaught exceptions
+process.on('uncaughtException', err => {
+    console.error('There was an uncaught error', err);
+    // process.exit(1) //mandatory (as per the Node.js docs)
+})

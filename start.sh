@@ -7,4 +7,5 @@ export PG_USER=chozoiadmin
 export PG_PASSWORD=123456789
 export PG_HOST=chozoi-svr-3.svr.chozoi.services
 export PG_DB=chozoi
+export HARNESS_ENDPOINT=https://harness.recommendation.chozoi.com/engines/1/events
 npm run dev
